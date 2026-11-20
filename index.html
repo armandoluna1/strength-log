@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strength Log</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head><body><main>
+<header><b class="logo"><i aria-hidden="true">▥</i> Strength Log</b><span>Training journal</span></header>
+<h1>Workout log<span>.</span></h1>
+<div class="layout">
+<section class="entry"><h2 id="formTitle">Log a set</h2>
+<form id="entry"><label>Training date<input type="date" id="day" required></label>
+<label>Exercise<input id="exercise" maxlength="80" placeholder="e.g. Bench press" required></label>
+<div class="pair"><label>Reps<input id="reps" type="number" min="1" max="1000" required></label>
+<label>Weight (lb)<input id="weight" type="number" step="any" min="0" max="10000" value="0" required></label></div>
+<button id="save">Save set</button><button type="button" class="light" id="cancel" hidden>Cancel edit</button>
+</form></section>
+<section class="history"><div class="head"><h2>Set history</h2><label>Filter by date<input id="filter" type="date"></label></div>
+<p id="summary" role="status">Loading sets…</p><ul id="sets"></ul></section>
+</div><p role="status" id="message"></p>
+</main></body></html>
